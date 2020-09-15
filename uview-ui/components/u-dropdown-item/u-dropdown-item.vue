@@ -1,7 +1,7 @@
 <template>
 	<view class="u-dropdown-item" v-if="active" @touchmove.stop.prevent="() => {}" @tap.stop.prevent="() => {}">
 		<view class="u-dropdown-item__options" v-if="!$slots.default">
-			<scroll-view scroll-y="true" style="height: 500rpx;">
+			<scroll-view scroll-y="true" style="500rpx">
 				<u-cell-group>
 					<u-cell-item @click="cellClick(item.value)" :arrow="false" :title="item.label" v-for="(item, index) in options" :key="index" :title-style="{
 						color: value == item.value ? activeColor : inactiveColor
